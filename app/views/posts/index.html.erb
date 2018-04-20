@@ -14,17 +14,23 @@
             <tr>
               <td>Title</td>
               <td>Body</td>
+              <td>Read</td>
             </tr>
           </thead>
           <% @posts.each do |list| %>
           <tbody>
               <td><%= list.title %></td>
               <td><%= list.body %></td>
+              <td>
+                <%= link_to "Read More", post_path(list),
+                :class => 'btn btn-default'%>
+              </td>
           </tbody>
           <%end%>
           <tfoot>
             <td>Title</td>
             <td>Body</td>
+            <td>Read</td>
           </tfoot>
         </table>
       </div>
