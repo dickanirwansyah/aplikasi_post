@@ -1,6 +1,38 @@
-<h1>All Blog Post</h1>
-<br>
-  <table border="1">
+<div class="container">
+  <div class="container-fluid">
+    <div class="col-lg-10 col-lg-offset-1">
+      <div class="page-header">
+        <h3><%=@title%></h3>
+      </div>
+      <button class="btn btn-primary">
+        <span class="glyphicon glyphicon-plus-sign"></span>
+        Add Post
+      </button>
+      <div class="page-header">
+        <table class="table table-hover table-bordered">
+          <thead>
+            <tr>
+              <td>Title</td>
+              <td>Body</td>
+            </tr>
+          </thead>
+          <% @posts.each do |list| %>
+          <tbody>
+              <td><%= list.title %></td>
+              <td><%= list.body %></td>
+          </tbody>
+          <%end%>
+          <tfoot>
+            <td>Title</td>
+            <td>Body</td>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+  <table>
     <thead>
       <tr>
         <td>Title</td>
@@ -22,3 +54,4 @@
       </tr>
     </tfoot>
   </table>
+-->

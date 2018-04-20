@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   def index
+    @title = 'Blog Application';
     @posts = Post.all
   end
 
